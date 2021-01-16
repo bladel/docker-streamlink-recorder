@@ -1,8 +1,8 @@
 # docker-streamlink-recorder
-Automated Dockerfile to record livestreams with streamlink
+Automated Dockerfile to record livestreams with streamlink based on 'docker-streamlink-recorder' by 'lauwarm'
 
 ## Description
-This is a Docker Container to record a livestream. It uses the official [Python Image](https://hub.docker.com/_/python) with the Tag *buster*  , installs [streamlink](https://github.com/streamlink/streamlink) and uses the Script [streamlink-recorder.sh](https://raw.githubusercontent.com/lauwarm/docker-streamlink-recorder/python3.8.1_buster_1.3.1/streamlink-recorder.sh) to periodically check if the stream is live.
+This is a Docker Container to record a livestream. It uses the official [Python Image](https://hub.docker.com/_/python) with the Tag *slim-buster*  , installs [streamlink](https://github.com/streamlink/streamlink) and uses the Script [streamlink-recorder.sh](https://raw.githubusercontent.com/lauwarm/docker-streamlink-recorder/python3.8.1_buster_1.3.1/streamlink-recorder.sh) to periodically check if the stream is live.
 
 ## Usage
 To run the Container:
@@ -27,4 +27,4 @@ $ docker run -v /home/:/home/download -e streamLink='twitch.tv/twitch' -e stream
 
 `streamOptions` - streamlink flags (--twitch-disable-hosting, separated by space)
 
-The File will be saved as `streamName-YearMonthDayHourMinuteSecond.mkv`
+The File will be saved as `streamName-YearMonthDay-HourMinuteSecond.mkv`
